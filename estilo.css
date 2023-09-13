@@ -3,10 +3,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Acme", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1 {
   display:flex;
+  position:sticky;
+  top:0;
   font-size: 2.8rem;
   align-items: center;
   justify-content: center;
@@ -16,12 +19,15 @@ h1 {
   color:blueviolet;
 }
 .menu{
+  position:sticky;
+  top: 81px;
   display:flex;
   flex-direction: row;
   overflow-x: scroll;
   flex-wrap: nowrap;
 }
 .menu-item{
+  background-size: cover;
   display:flex;
   flex-direction: column;
   width:180px;
@@ -29,10 +35,40 @@ h1 {
   justify-content: center;
 }
 .menu-item img{
-  width:160px;
+  height:100%;
+  cursor: pointer;
 }
 
+.anterior, .proximo {
+  width:40px;
+  opacity:.55;
+  position: fixed;
+  top: 130px;
+  animation: 13s ease-in 2s infinite both running pisca;
+  z-index: 100;
+}
+.proximo{
+  right:0px;
 
+}
+
+@keyframes pisca {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: .55;
+  }
+  50%{
+    opacity: 0;
+  }
+  70%{
+    opacity:.55;
+  }
+  90%{
+    opacity:0;
+  }
+}
 @media (max-width: 500px){
   h1{
     font-size: 1.8rem;
