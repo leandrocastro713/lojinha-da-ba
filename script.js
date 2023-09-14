@@ -1,4 +1,4 @@
-let p  = document.querySelector('#p')
+// ------------------------------------ FUNÇÕES DO BANNER
 let imagensBanner = [
   './img/20230808_203107.jpg',
   './img/20230808_212505.jpg',
@@ -15,10 +15,30 @@ function nextImage(){
   bannerImage.setAttribute('src', imagensBanner[currentImageIndex])
   console.log(currentImageIndex)
 }
-
-function ocultarP(){
-  console.log('oculparP')
-  p.setAttribute('display','none')
+function voltar(){
+  window.scrollTo(0,0)
 }
 
-document.addEventListener('click', nextImage)
+
+//---------------------------- CONTAINER PULSEIRAS
+let pulseirasImg = [
+  'floral 01 (1).jpg',
+  'floral 01 (2).jpg',
+  'floral 01 (3).jpg',
+  'floral 01 (4).jpg',
+  'floral 01 (5).jpg',
+  'floral 01 (6).jpg'
+]
+let pulseirasContainer = document.querySelector('.pulseiras')
+pulseirasImg.map((el)=>{
+  let newImg = document.createElement('img')
+  newImg.src = './img/pulseiras/' + el
+  newImg.classList = 'container-img'
+  pulseirasContainer.appendChild(newImg)
+})
+
+let newVoltar = document.createElement('p')
+newVoltar.innerHTML='Voltar'
+newVoltar.classList = 'btn-voltar'
+newVoltar.addEventListener('click', voltar)
+pulseirasContainer.appendChild(newVoltar)
