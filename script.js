@@ -21,12 +21,12 @@ function voltar(){
 
 //---------------------------- CONTAINER PULSEIRAS
 let pulseirasImg = [
-  'floral01(1).jpg',
-  'floral01(2).jpg',
-  'floral01(3).jpg',
-  'floral01(4).jpg',
-  'floral01(5).jpg',
-  'floral01(6).jpg'
+  'floral011.jpg',
+  'floral012.jpg',
+  'floral013.jpg',
+  'floral014.jpg',
+  'floral015.jpg',
+  'floral016.jpg'
 ]
 let pulseirasContainer = document.querySelector('.pulseiras')
 pulseirasImg.map((el)=>{
