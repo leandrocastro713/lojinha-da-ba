@@ -13,7 +13,6 @@ function nextImage(){
   currentImageIndex ++
   if (currentImageIndex == 3) {currentImageIndex = 0}
   bannerImage.setAttribute('src', imagensBanner[currentImageIndex])
-  console.log(currentImageIndex)
 }
 function voltar(){
   window.scrollTo(0,0)
@@ -37,8 +36,23 @@ pulseirasImg.map((el)=>{
   pulseirasContainer.appendChild(newImg)
 })
 
-let newVoltar = document.createElement('p')
-newVoltar.innerHTML='Voltar'
-newVoltar.classList = 'btn-voltar'
-newVoltar.addEventListener('click', voltar)
-pulseirasContainer.appendChild(newVoltar)
+let newVoltar1 = document.createElement('p')
+newVoltar1.innerHTML='Voltar'
+newVoltar1.classList = 'btn-voltar'
+newVoltar1.addEventListener('click', voltar)
+pulseirasContainer.appendChild(newVoltar1)
+
+
+let aneisContainer = document.querySelector('.aneis')
+pulseirasImg.map((el)=>{
+  let newImg = document.createElement('img')
+  newImg.src = './img/aneis/' + el
+  newImg.classList = 'container-img'
+  aneisContainer.appendChild(newImg)
+})
+
+let newVoltar2 = document.createElement('p')
+newVoltar2.innerHTML='Voltar'
+newVoltar2.classList = 'btn-voltar'
+newVoltar2.addEventListener('click', voltar)
+aneisContainer.appendChild(newVoltar2)
