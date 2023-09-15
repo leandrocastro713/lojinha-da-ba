@@ -1,3 +1,20 @@
+// ------------------------------------ FUNÇÕES DO header
+let headerContent = document.querySelector('#bemvindo')
+
+// ------------------------------  funções do modal 
+// modal modal-img  modal-p modal-close
+let modal = document.getElementById('modal')
+let modalImg = document.getElementById('modal-img')
+let modalP = document.getElementById('modal-p')
+let modalClose = document.getElementById('modal-close')
+modal.style.opacity=0;
+modal.style.zIndex=-100;
+modalImg.setAttribute('src','')
+modalP.innerText='Paragrafou'
+modalClose.addEventListener('click',()=>{
+  modal.style.opacity=0;
+  modal.style.zIndex=-200;
+})
 // ------------------------------------ FUNÇÕES DO BANNER
 let imagensBanner = [
   './img/20230808_203107.jpg',
@@ -13,6 +30,8 @@ function nextImage(){
   currentImageIndex ++
   if (currentImageIndex == 3) {currentImageIndex = 0}
   bannerImage.setAttribute('src', imagensBanner[currentImageIndex])
+  headerContent.style.backgroundImage = imagensBanner[currentImageIndex]
+  console.log(headerContent)
 }
 function voltar(){
   window.scrollTo(0,0)
@@ -20,39 +39,41 @@ function voltar(){
 
 
 //---------------------------- CONTAINER PULSEIRAS
-let pulseirasImg = [
-  'floral11.jpg',
-  'floral12.jpg',
-  'floral13.jpg',
-  'floral14.jpg',
-  'floral15.jpg',
-  'floral16.jpg'
+let pulseirasObj = [
+  ['floral11.jpg',5],
+  ['floral12.jpg',5],
+  ['floral13.jpg',4],
+  ['floral14.jpg',5],
+  ['floral15.jpg',6],
+  ['floral16.jpg',5]
 ]
+console.log(pulseirasObj)
 let pulseirasContainer = document.querySelector('.pulseiras')
-pulseirasImg.map((el)=>{
+for(let i=0; i<5; i++){
+  let newDiv = document.createElement('div')
+  pulseirasContainer.appendChild(newDiv)
+  newDiv.classList = 'container-div'
   let newImg = document.createElement('img')
-  newImg.src = './img/pulseiras/' + el
+  newImg.src = './img/pulseiras/' + pulseirasObj[i][0]
   newImg.classList = 'container-img'
-  pulseirasContainer.appendChild(newImg)
-})
+  newDiv.appendChild(newImg)
+  let newP = document.createElement('p')
+  newP.innerHTML = 'R$ ' + pulseirasObj[i][1] + ',00'
+  newP.classList = 'container-p'
+  // console.log(puls)
+  newDiv.appendChild(newP)
+  newDiv.addEventListener('mouseenter',()=>{
+    newP.style.bottom = 0
+  })
+  newDiv.addEventListener('mouseleave',()=>{
+    newP.style.bottom = '-30px';
+  })
+  newDiv.addEventListener('click',()=>{
+    modal.style.opacity=1;
+    modal.style.zIndex=200;
+    modalImg.setAttribute('src',newImg.src)
+    modalP.innerText = newP.innerText
+  })
+}
 
-let newVoltar1 = document.createElement('p')
-newVoltar1.innerHTML='Voltar'
-newVoltar1.classList = 'btn-voltar'
-newVoltar1.addEventListener('click', voltar)
-pulseirasContainer.appendChild(newVoltar1)
 
-
-let aneisContainer = document.querySelector('.aneis')
-pulseirasImg.map((el)=>{
-  let newImg = document.createElement('img')
-  newImg.src = './img/aneis/' + el
-  newImg.classList = 'container-img'
-  aneisContainer.appendChild(newImg)
-})
-
-let newVoltar2 = document.createElement('p')
-newVoltar2.innerHTML='Voltar'
-newVoltar2.classList = 'btn-voltar'
-newVoltar2.addEventListener('click', voltar)
-aneisContainer.appendChild(newVoltar2)

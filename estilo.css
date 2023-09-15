@@ -61,10 +61,10 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.menu-item a{
+.menu-item a {
   text-decoration: none;
   text-align: center;
-  color:black;
+  color: black;
 }
 .menu-item a img {
   position: relative;
@@ -113,22 +113,73 @@ h1 {
     opacity: 0;
   }
 }
-@media (max-width: 500px) {
-  h1 {
-    font-size: 1.8rem;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-  }
-}
 .menu-item a img {
   width: 140px;
   height: 140px;
 }
+/*------------------------ modal-close modal-p modal-img modal */
+#modal{
+  background-color: rgba(0, 0, 0, 0.673);
+  width: 100vw;
+  height: 100vh;
+  position:fixed;
+  display:flex;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity:0;
+  justify-content: center;
+  align-items: center;
+  transition:all ease 500ms;
+}
+#modal-img{
+  display:flex;
+  align-self: center;
+  justify-self: center;
+  width: 95%;
+  left:1%;
+  /* top: 10%; */
+  position:absolute;
+}
+#modal-p{
+  position: fixed;
+  display:flex;
+  width:90%;
+  bottom: 20px;
+  left: 20px;
+  color: aliceblue;
+  font-size: 5vh;
+  text-shadow: 1px 2px 3px rgb(65, 64, 64);
+}
+#modal-close{
+  position: fixed;
+  font-size: 50px;
+  /* font-weight: bold; */
+  display:flex;
+  cursor:pointer;
+  padding:0 15px;
+  right:15px;
+  top:15px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: crimson;
+  color: white;
+}
 
+/*---------------------------------------------------- containers */
+.master-container{
+  margin: 2rem auto 0;
+  display:flex;
+  position:relative;
+  flex-direction: column;
+}
 .div-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0 auto;
   width: 100%;
-  margin: 2rem auto;
   max-width: 1300px;
   height: 100%;
   min-height: 400px;
@@ -143,24 +194,66 @@ h1 {
   color: blueviolet;
   font-size: 1.6rem;
 }
-.container-img {
+.container-div {
+  display:flex;
+  position:relative;
   border-radius: 3px;
   width: 50%;
+  height: 150px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+.container-img {
+  border-radius: 3px;
+  width: 100%;
   height: 150px;
   cursor: pointer;
   object-fit: cover;
   transition: all 300ms ease-in-out;
 }
+.container-p {
+  background-color: rgba(240, 248, 255, 0.4);
+  color: black;
+  position: absolute;
+  bottom:-30px;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  justify-content: center;
+  transition: ease 300ms ;
+}
 .container-img:hover {
   transform: scale(1.08);
   box-shadow: 2px 2px 15px silver;
-}
+} 
 .btn-voltar {
+  color:black;
+  text-decoration: none;
   cursor: pointer;
   display: block;
   position: relative;
   text-align: center;
   padding: 10px 15px;
+}
+.btn-voltar:visited{
+  color: black;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+  }
+}
+@media (min-width: 500px) {
+  .container-div {
+    width: 33%;
+    height: 220px;
+  }
+  
 }
 
 @media (min-width: 700px) {
@@ -186,11 +279,17 @@ h1 {
     padding: 2rem 0;
     justify-content: center;
   }
-  .container-img {
+  .container-div {
     width: 25%;
     height: 220px;
   }
   .menu-item img {
     width: 220px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-div {
+    width: 20%;
+    height: 220px;
   }
 }

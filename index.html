@@ -15,86 +15,102 @@
       href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="estilo.css" />
     <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="estilo.css" />
     <title>Lojinha da Ba - Artesanais e Bijus</title>
   </head>
   <body>
     <!----------------------------------------------- header  -->
     <section id="header" class="header">
-      <h1>Bemvindo à Lojinha da Ba</h1>
-
+      <h1 id="bemvindo">Bemvindo à Lojinha da Ba</h1>
+      
+      <!----------------------------------------------- banner  -->
       <banner class="banner">
         <img src="./img/20230808_203107.jpg" alt="" />
       </banner>
-
+      
       <img src="./img/anterior.png" alt="botão anterior" class="anterior" />
+      
+      <!----------------------------------------------- modal  -->
+      <section id="modal">
+        <img id='modal-img'src="./img/20230808_203107.jpg" alt="">
+        <p id='modal-p'>Paragrafo</p>
+        <p id='modal-close'>X</p>
 
+      </section>
+      <!----------------------------------------------- menu  -->
       <nav class="menu">
         
         <li class="menu-item">
-          <a href="#pulseiras">
+          <a href="#pulseiras-title">
             <img src="./img/pulseiras.jpeg" alt="" />
             <p>Pulseiras</p>
           </a>
         </li>
         
         <li class="menu-item">
-          <a href="#aneis">
+          <a href="#aneis-title">
             <img src="./img/aneis.jpg" alt="" />
             <p>Anéis</p>
           </a>
         </li>
         
         <li class="menu-item">
-          <a href="#colares">
+          <a href="#colares-title">
             <img src="./img/colar.webp" alt="" />
             <p>Colares</p>
           </a>
         </li>
-
+        
         <li class="menu-item">
-          <a href="#gargantilhas">
+          <a href="#gargantilhas-title">
             <img src="./img/gargantilha.webp" alt="" />
             <p>Gargantilhas</p>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="#cordinhas">
+          <a href="#cordinhas-title">
             <img src="./img/cordinha.webp" alt="" />
             <p>Cordinha de celular</p>
           </a>
         </li>
       </nav>
-
+      
       <img src="./img/proximo.png" alt="botão proximo" class="proximo" />
     </section>
     <!-- header -->
-
+    
+    <!-------------------------------------- master container  -->
     <section class="master-container">
+      <p id='pulseiras-title' class="container-title">Pulseiras</p>
       <div id="pulseiras" class="pulseiras div-container">
-        <p class="container-title">Pulseiras</p>
       </div>
-
+      <a class="btn-voltar" href="#header">Voltar</a>
+      
+      <p id='aneis-title' class="container-title">Anéis</p>
       <div id="aneis" class="aneis div-container">
-        <p class="container-title">Anéis</p>
       </div>
-
+      <a class="btn-voltar" href="#header">Voltar</a>
+      
+      <p id='colares-title' class="container-title">Colares</p>
       <div id="colares" class="colares div-container">
-        <p class="container-title">Colares</p>
       </div>
-
+      <a class="btn-voltar" href="#header">Voltar</a>
+      
+      <p id='gargantilhas-title' class="container-title">Gargantilhas</p>
       <div id="gargantilhas" class="gargantilhas div-container">
-        <p class="container-title">Gargantilhas</p>
       </div>
-
+      <a class="btn-voltar" href="#header">Voltar</a>
+      
+      <p id='cordinhas-title' class="container-title">Cordinhas de celular</p>
       <div id="cordinhas" class="cordinhas div-container">
-        <p class="container-title">Cordinhas de celular</p>
       </div>
+      <a class="btn-voltar" href="#header">Voltar</a>
     </section>
     <!-- master-container -->
-
+    
     <section class="rodape">rodape</section>
   </body>
-</html>
+  </html>
+  
