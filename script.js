@@ -10,6 +10,7 @@ let modalClose = document.getElementById('modal-close')
 modal.style.opacity=0;
 modal.style.zIndex=-100;
 modalImg.setAttribute('src','')
+modalImg.style.scale = 0
 modalP.innerText='Paragrafou'
 modalClose.addEventListener('click',()=>{
   modal.style.opacity=0;
@@ -72,6 +73,7 @@ for(let i=0; i<5; i++){
     modal.style.opacity=1;
     modal.style.zIndex=200;
     modalImg.setAttribute('src',newImg.src)
+    modalImg.style.scale = 1;
     modalP.innerText = newP.innerText
   })
 }
