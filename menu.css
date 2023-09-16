@@ -27,7 +27,6 @@
   height: 100%;
   cursor: pointer;
 }
-
 .menu-item a img:hover {
   transition: transform ease 400ms;
   transform: scale(1.03);
@@ -36,6 +35,37 @@
   width: 140px;
   height: 140px;
 }
+.anterior,
+.proximo {
+  width: 40px;
+  opacity: 0.55;
+  position: absolute;
+  top: 287px;
+  animation: 15s ease-in infinite both running pisca;
+  z-index: 100;
+}
+.proximo {
+  right: 5px;
+}
+
+@keyframes pisca {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.55;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 693px) {
   .menu {
     padding: 2rem 0;

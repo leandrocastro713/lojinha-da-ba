@@ -18,18 +18,6 @@
   position: relative;
   width: 110%;
 }
-.anterior,
-.proximo {
-  width: 40px;
-  opacity: 0.55;
-  position: absolute;
-  top: 287px;
-  animation: 15s ease-in infinite both running pisca;
-  z-index: 100;
-}
-.proximo {
-  right: 5px;
-}
 @keyframes banner-animation {
   0% {
     left: 0px;
