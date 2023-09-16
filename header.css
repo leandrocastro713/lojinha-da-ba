@@ -1,0 +1,29 @@
+.title {
+  background-image: linear-gradient(rgb(243, 190, 161), rgba(245, 245, 237, 0.5)), url("./img/pulseiras.jpeg");
+  background-color: rgb(247, 203, 180);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: rgb(81, 78, 78);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.title h1 {
+  font-size: 2.8rem;
+  justify-content: center;
+  position: sticky;
+  margin: 1rem 0 0 0;
+  vertical-align: center;
+  top: 0;
+}
+.title h3{
+  padding: 0 0 1rem;
+}
+@media (max-width: 500px) {
+  .title h1 {
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+  }
+}

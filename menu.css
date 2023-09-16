@@ -1,0 +1,60 @@
+.menu {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-x: scroll;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+.menu-item {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
+}
+.menu-item a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+.menu-item a img {
+  position: relative;
+  display: block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.menu-item a img:hover {
+  transition: transform ease 400ms;
+  transform: scale(1.03);
+}
+.menu-item a img {
+  width: 140px;
+  height: 140px;
+}
+@media (min-width: 693px) {
+  .menu {
+    padding: 2rem 0;
+  }
+  .menu-item {
+    width: 240px;
+  }
+}
+@media (min-width: 1000px) {
+  .menu {
+    padding: 2rem 0;
+    justify-content: center;
+  }
+  .menu-item img {
+    width: 220px;
+  }
+}
+@media (min-width: 500px) {
+  .anterior, .proximo{
+    top:370px;
+  }
+}

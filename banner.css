@@ -1,0 +1,61 @@
+.banner {
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-width: 1000px;
+  object-fit: cover;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+.banner img {
+  animation: 5s ease-in-out infinite running banner-animation;
+  height: 200px;
+  left: 0px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  width: 110%;
+}
+.anterior,
+.proximo {
+  width: 40px;
+  opacity: 0.55;
+  position: absolute;
+  top: 287px;
+  animation: 15s ease-in infinite both running pisca;
+  z-index: 100;
+}
+.proximo {
+  right: 5px;
+}
+@keyframes banner-animation {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .anterior, .proximo{
+    top:350px;
+  }
+}
+@media (min-width: 693px) {
+  .banner {
+    height: 200px;
+  }
+  .banner img {
+    height: 220px;
+  }
+  .anterior,
+  .proximo {
+    display: none;
+    top: 377px;
+  }
+}

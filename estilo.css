@@ -13,110 +13,6 @@ html,
 body {
   overflow-x: hidden;
 }
-.title {
-  background-image: linear-gradient(rgb(243, 190, 161), rgba(245, 245, 237, 0.5)), url("./img/pulseiras.jpeg");
-  background-color: rgb(247, 203, 180);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: overlay;
-  color: rgb(81, 78, 78);
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.title h1 {
-  font-size: 2.8rem;
-  justify-content: center;
-  position: sticky;
-  margin: 1rem 0 0 0;
-  vertical-align: center;
-  top: 0;
-}
-.title h3{
-  padding: 0 0 1rem;
-}
-.banner {
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-width: 1000px;
-  object-fit: cover;
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-}
-.banner img {
-  animation: 5s ease-in-out infinite running banner-animation;
-  height: 200px;
-  left: 0px;
-  overflow: hidden;
-  object-fit: cover;
-  position: relative;
-  width: 110%;
-}
-
-.menu {
-  flex-wrap: nowrap;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  overflow-x: scroll;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-.menu-item {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-  align-items: center;
-  justify-content: center;
-}
-.menu-item a {
-  text-decoration: none;
-  text-align: center;
-  color: black;
-}
-.menu-item a img {
-  position: relative;
-  display: block;
-  height: 100%;
-  cursor: pointer;
-}
-
-.menu-item a img:hover {
-  transition: transform ease 400ms;
-  transform: scale(1.03);
-}
-.anterior,
-.proximo {
-  width: 40px;
-  opacity: 0.55;
-  position: absolute;
-  top: 287px;
-  animation: 15s ease-in infinite both running pisca;
-  z-index: 100;
-}
-.proximo {
-  right: 5px;
-}
-.menu-item a img {
-  width: 140px;
-  height: 140px;
-}
-@keyframes banner-animation {
-  0% {
-    left: 0px;
-  }
-  50% {
-    left: -10px;
-  }
-  100% {
-    left: 0;
-  }
-}
 @keyframes pisca {
   0% {
     opacity: 0;
@@ -258,75 +154,44 @@ body {
   color: black;
 }
 .rodape{
-  background-color: var(--backColor);
-  color: var(--frontColor);
   padding: 20px 15px;
   line-height: 1.5rem;
   font-size: .8rem;
+  background-image: linear-gradient(rgb(243, 190, 161), rgba(245, 245, 237, 0.5)), url("./img/pulseiras.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: rgb(81, 78, 78);
+  align-items: center;
+
 }
 .rodape .whats-div {
-  width:225px;
-  gap: 5px;
-  align-items: center;
   display:flex;
+  align-items: center;
+  gap: 5px;
+  width:225px;
+  padding: 10px 0;
 }
 .rodape #whats-icon{
   width:25px;
 }
 .rodape #whats-number{
+  font-size: 1.5rem;
+  color: rgb(53, 50, 50);
   flex-direction: row;
 }
 
-@media (max-width: 500px) {
-  .title h1 {
-    font-size: 1.8rem;
-    align-items: center;
-    justify-content: center;
-  }
-  .anterior, .proximo{
-    top:350px;
-  }
-}
 @media (min-width: 500px) {
   .container-div {
     width: 33%;
     height: auto;
   }
-  .anterior, .proximo{
-    top:370px;
-  }
 }
 
-@media (min-width: 693px) {
-  .banner {
-    height: 200px;
-  }
-  .banner img {
-    height: 220px;
-  }
-  .menu {
-    padding: 2rem 0;
-  }
-  .menu-item {
-    width: 240px;
-  }
-  .anterior,
-  .proximo {
-    display: none;
-    top: 377px;
-  }
-}
 @media (min-width: 1000px) {
-  .menu {
-    padding: 2rem 0;
-    justify-content: center;
-  }
   .container-div {
     width: 20%;
     height: auto;
-  }
-  .menu-item img {
-    width: 220px;
   }
 }
 @media (min-width: 1200px) {
