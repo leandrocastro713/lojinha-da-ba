@@ -23,14 +23,17 @@
   transition: ease all 500ms;
 }
 #modal-p {
-  position: fixed;
   display: flex;
+  position: fixed;
   width: 90%;
-  bottom: 20px;
+  padding: 5px 15px;
   left: 20px;
+  bottom: 20px;
+  border-radius: 10px;
   color: aliceblue;
   font-size: 5vh;
   text-shadow: 1px 2px 3px rgb(65, 64, 64);
+  background-color: rgba(0, 0, 0, 0.318);
 }
 #modal-close {
   position: fixed;
