@@ -40,7 +40,7 @@
   width: 40px;
   opacity: 0.55;
   position: absolute;
-  top: 287px;
+  top: 348px;
   animation: 15s ease-in infinite both running pisca;
   z-index: 100;
 }
